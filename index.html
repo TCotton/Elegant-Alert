@@ -112,8 +112,9 @@ p {
 	text-align : center;
 	font-size : 30px;
 	margin-bottom : 30px;
-	font-family : sans-serif;
+	font-family : Georgia,Utopia,Palatino,'Palatino Linotype',serif;
 	background : #fff;
+	color : #046380;
 	dislay : none;
 }
 footer {
@@ -304,7 +305,7 @@ var FormValid = {
         NewAlert.init(response);
 		// run NewAlert object
 
-        NewAlert.time = 75;
+        NewAlert.time = 60;
 
     },
 
@@ -353,6 +354,7 @@ AddOnload(init);
   <div id="content">
     <p>An alternative to the ugly JavaScript alert</p>
     <p>Tested in all major browsers</p>
+	<p>The style of the new alert box can be changed with CSS and the animation time can be easily changed in the JavaScript code</p>
     <p>Just add your text to the field below to try it out. <br />
       You know you want to, baby</p>
     <form method="post" action="#" name="form">
