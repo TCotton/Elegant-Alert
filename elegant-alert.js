@@ -50,6 +50,8 @@ var NewAlert = {
         NewAlert.nodeAlert.innerHTML = value1;
         document.body.appendChild(NewAlert.nodeAlert);
         NewAlert.nodeAlert.style.top = TopMeasure.test() + "px";
+		
+		NewAlert.alertFade();
 
     },
 
@@ -57,7 +59,6 @@ var NewAlert = {
     alertFade: function (value2) {
 
         // alertWrap method;
-        NewAlert.alertWrap(value2);
 
         setOpacity(NewAlert.nodeAlert, 10);
 

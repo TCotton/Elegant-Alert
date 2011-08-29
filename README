@@ -2,13 +2,15 @@ A simple alternative to the ugly JavaScript alert
 
 Just add the following object to your code:
 
-NewAlert.alertFade(" Place your text in here ");
+NewAlert.alertWrap(" Place your text in here ");
 
 To change the time of the animation then just add the following object:
 
 NewAlert.time = 75;
 
 http://www.suburban-glory.com/blog
+
+Tested in all known major browsers
 
 The MIT License (MIT)
 
