@@ -2,7 +2,7 @@ A simple alternative to the ugly JavaScript alert
 
 Just add the following object to your code:
 
-NewAlert.alertWrap(" Place your text in here ");
+NewAlert.init(" Place your text in here ");
 
 To change the time of the animation then just add the following object:
 
