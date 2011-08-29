@@ -32,9 +32,6 @@ function setOpacity(obj, value) {
     obj.style.filter = 'alpha(opacity=' + value * 10 + ')';
 }
 
-
-
-
 var NewAlert = {
     // this class is to replace the standard javascript alert box
     // declare attributes at the top
@@ -42,40 +39,37 @@ var NewAlert = {
     stepCount: 0,
     time: 100,
     fade: null,
-	data: null,
-	run: null,
+    data: null,
+    run: null,
 
     alertCheck: function () {
-	
-	var $bodyChildren, $len, $x, $first;
 
-     $bodyChildren = document.body.childNodes;
+        var $bodyChildren, $len, $x, $first;
 
-       $x = 0;
+        $bodyChildren = document.body.childNodes;
+
+        $x = 0;
 
         for ($len = $bodyChildren.length; $x < $len; $x += 1) {
-		
-		// Checks to make sure that the alert is not run twice until after
-		// it has finished 
 
+            // Checks to make sure that the alert is not run twice until after
+            // it has finished 
             if ($bodyChildren[$x].nodeType === 1 && $bodyChildren[$x].className === "elegant-alertxyz") {
-			
-			// loops through entire body nodes to make sure class 'elegant-alertxyz' is not already present
-			
-			NewAlert.run = 1;
-			break;
-			
-			} 
 
-        }// end for loop
-		
-		// if animation is not already running then run method alertWrap
-		if (NewAlert.run !== 1) {
-		
-		NewAlert.alertWrap();
-		
-		}
-		
+                // loops through entire body nodes to make sure class 'elegant-alertxyz' is not already present
+                NewAlert.run = 1;
+                break;
+
+            }
+
+        } // end for loop
+        // if animation is not already running then run method alertWrap
+        if (NewAlert.run !== 1) {
+
+            NewAlert.alertWrap();
+
+        }
+
     },
 
     // Create error HTML with alertWrap
@@ -90,8 +84,8 @@ var NewAlert = {
         NewAlert.nodeAlert.style.top = TopMeasure.test() + "px";
 
         NewAlert.alertFade();
-		
-	
+
+
     },
 
     // use alertFade to create the fade out opacity effect
@@ -115,26 +109,26 @@ var NewAlert = {
                 clearInterval(NewAlert.fade);
                 // destroy node after it has finished fading into nothing
                 document.body.removeChild(NewAlert.nodeAlert);
-				
-				// stepCount attribute needs to be reset back to 0
-				NewAlert.stepCount = 0;
-				
-				// reset back to null
-				NewAlert.run = null;
+
+                // stepCount attribute needs to be reset back to 0
+                NewAlert.stepCount = 0;
+
+                // reset back to null
+                NewAlert.run = null;
             }
 
         }, NewAlert.time);
 
     },
-	
-	init: function($data) {
-	
-	// Place data into data attribute
-	NewAlert.data = $data;
-	
-	// Run alertCheck method
-	NewAlert.alertCheck();
-	
-	}
+
+    init: function ($data) {
+
+        // Place data into data attribute
+        NewAlert.data = $data;
+
+        // Run alertCheck method
+        NewAlert.alertCheck();
+
+    }
 
 };
