@@ -1,0 +1,18 @@
+.elegant-alertxyz {
+	position : absolute;
+	left: 0;
+	top : 0;
+	width : 100%;
+	z-index : 100;
+	padding : 30px 0 30px 0;
+	text-align : center;
+	font-size : 30px;
+	margin-bottom : 30px;
+	font-family : Georgia,Utopia,Palatino,'Palatino Linotype',serif;
+	background : #fff;
+	color : #046380;
+	-webkit-box-shadow : 0 3px 3px #999;
+	-moz-box-shadow : 0 3px 3px #999;
+	box-shadow : 0 3px 3px #999;
+
+}
